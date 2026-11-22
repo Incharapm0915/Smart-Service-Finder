@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ── Dark Mode Global ───────────────────── */
+body.dark {
+  background: #0d0d0d;
+  color: #f0f0f0;
+}
+
+body.dark .home-card {
+  background: #1a1a2e;
+  color: #f0f0f0;
+}
+
+body.dark .home-card h1 {
+  color: #f0f0f0;
+}
+
+body.dark .home-card p {
+  color: #aaa;
+}
+
+body.dark .form-group label {
+  color: #ccc;
+}
+
+body.dark .form-group select,
+body.dark .form-group input,
+body.dark .location-row input {
+  background: #16213e;
+  color: #f0f0f0;
+  border-color: #0f3460;
+}
+
+body.dark .results-container {
+  background: #0d0d0d;
+}
+
+body.dark .list-section {
+  background: #111;
+  border-color: #222;
+}
+
+body.dark .place-card {
+  border-color: #222;
+}
+
+body.dark .place-card:hover {
+  background: #1a1a2e;
+}
+
+body.dark .place-card h4 {
+  color: #f0f0f0;
+}
+
+body.dark .place-card p {
+  color: #aaa;
+}
+
+body.dark .details-card {
+  background: #1a1a2e;
+}
+
+body.dark .details-card h3 {
+  color: #f0f0f0;
+}
+
+body.dark .info-row .info-value {
+  color: #ccc;
+}
+
+body.dark .details-container {
+  background: #0d0d0d;
+}
+
+body.dark .favorites-container {
+  background: #0d0d0d;
+}
+
+body.dark .fav-card {
+  background: #1a1a2e;
+}
+
+body.dark .fav-card h4 {
+  color: #f0f0f0;
+}
+
+body.dark .fav-card p {
+  color: #aaa;
+}
+
+body.dark .favorites-body {
+  color: #f0f0f0;
+}

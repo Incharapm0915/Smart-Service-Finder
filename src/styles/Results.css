@@ -1,0 +1,141 @@
+.results-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.results-header {
+  background: #1a1a2e;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.results-header h2 {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.results-header a {
+  color: #e94560;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.filter-bar {
+  background: #16213e;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filter-bar select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #0f3460;
+  color: white;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filter-bar input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #0f3460;
+  color: white;
+  font-size: 0.85rem;
+  width: 180px;
+}
+
+.filter-bar input::placeholder {
+  color: #aaa;
+}
+
+.results-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.map-section {
+  flex: 1;
+  z-index: 0;
+}
+
+.list-section {
+  width: 320px;
+  overflow-y: auto;
+  background: #f8f9fa;
+  border-left: 1px solid #ddd;
+}
+
+.place-card {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.place-card:hover {
+  background: #e8f0fe;
+}
+
+.place-card h4 {
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  margin-bottom: 4px;
+}
+
+.place-card p {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.place-card .distance {
+  font-size: 0.78rem;
+  color: #0f3460;
+  font-weight: 600;
+}
+
+.place-card .fav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  float: right;
+}
+
+.no-results {
+  padding: 30px;
+  text-align: center;
+  color: #999;
+}
+
+.loading-msg {
+  padding: 30px;
+  text-align: center;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .results-body {
+    flex-direction: column;
+  }
+
+  .list-section {
+    width: 100%;
+    max-height: 300px;
+    border-left: none;
+    border-top: 1px solid #ddd;
+  }
+}

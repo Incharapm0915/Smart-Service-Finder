@@ -1,0 +1,175 @@
+.favorites-container {
+  min-height: 100vh;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.favorites-header {
+  background: #1a1a2e;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.favorites-header h2 {
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.favorites-header a {
+  color: #e94560;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.favorites-body {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.favorites-count {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.fav-card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.fav-card:hover {
+  transform: translateY(-2px);
+}
+
+.fav-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.fav-card h4 {
+  font-size: 1rem;
+  color: #1a1a2e;
+  flex: 1;
+}
+
+.fav-card .type-badge {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #0f3460;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.fav-card p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.fav-card .opening {
+  font-size: 0.8rem;
+  color: #2e7d32;
+}
+
+.fav-card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.fav-card-actions button {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.fav-card-actions button:hover {
+  opacity: 0.8;
+}
+
+.btn-view {
+  background: #0f3460;
+  color: white;
+}
+
+.btn-remove {
+  background: #fdecea;
+  color: #e94560;
+}
+
+.empty-favorites {
+  text-align: center;
+  padding: 80px 20px;
+  color: #999;
+}
+
+.empty-favorites h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.empty-favorites a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: #0f3460;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.clear-btn {
+  padding: 8px 16px;
+  background: #fdecea;
+  color: #e94560;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background: #e94560;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .favorites-body {
+    margin: 16px auto;
+  }
+}

@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Page background ──────────────────────────────────────────── */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: linear-gradient(135deg, #0d0d1a 0%, #1a1a3e 40%, #0f3460 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-container::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(233, 69, 96, 0.12) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.home-container::after {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(15, 52, 96, 0.4) 0%, transparent 70%);
+  bottom: -80px;
+  left: -80px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Hero text ────────────────────────────────────────────────── */
+.home-hero {
+  text-align: center;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.home-hero h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.home-hero h1 span {
+  color: #e94560;
+}
+
+.home-hero p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* ── Main card ────────────────────────────────────────────────── */
+.home-card {
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: 24px;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Section labels ───────────────────────────────────────────── */
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+/* ── Service grid ─────────────────────────────────────────────── */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.service-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 6px;
+  border: 2px solid #e8e8f0;
+  border-radius: 14px;
+  cursor: pointer;
+  background: #fafafa;
+  transition: all 0.18s ease;
+  user-select: none;
+}
+
+.service-tile:hover {
+  border-color: #0f3460;
+  background: #eef2ff;
+  transform: translateY(-2px);
+}
+
+.service-tile.active {
+  border-color: #e94560;
+  background: linear-gradient(135deg, #fff0f3, #ffe4ea);
+  box-shadow: 0 4px 14px rgba(233, 69, 96, 0.18);
+}
+
+.service-tile .tile-icon {
+  font-size: 1.5rem;
+}
+
+.service-tile .tile-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #555;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.service-tile.active .tile-label {
+  color: #c0293d;
+}
+
+/* ── Location section ─────────────────────────────────────────── */
+.location-section {
+  margin-bottom: 20px;
+}
+
+.location-input-wrap {
+  display: flex;
+  gap: 8px;
+  margin-top: 0;
+}
+
+.location-input-wrap input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0ec;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  outline: none;
+  color: #222;
+  background: #fafafa;
+  transition: border 0.2s;
+}
+
+.location-input-wrap input:focus {
+  border-color: #0f3460;
+  background: #fff;
+}
+
+.icon-btn {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid #e0e0ec;
+  background: #fafafa;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.18s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn:hover {
+  border-color: #0f3460;
+  background: #eef2ff;
+}
+
+.icon-btn:active {
+  transform: scale(0.95);
+}
+
+/* ── Error ────────────────────────────────────────────────────── */
+.error-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #fff0f3;
+  border: 1px solid #ffc0cb;
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  font-size: 0.82rem;
+  color: #c0293d;
+}
+
+.error-banner .err-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── Search button ────────────────────────────────────────────── */
+.search-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #e94560, #c0293d);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: all 0.2s;
+  box-shadow: 0 6px 20px rgba(233, 69, 96, 0.35);
+}
+
+.search-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #c0293d, #a01f30);
+  box-shadow: 0 8px 24px rgba(233, 69, 96, 0.45);
+  transform: translateY(-1px);
+}
+
+.search-btn:disabled {
+  background: #ccc;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ── Divider ──────────────────────────────────────────────────── */
+.card-divider {
+  height: 1px;
+  background: #f0f0f5;
+  margin: 22px 0;
+}
+
+/* ── Favorites link ───────────────────────────────────────────── */
+.fav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-top: 22px;
+  position: relative;
+  z-index: 1;
+  transition: color 0.2s;
+}
+
+.fav-link:hover {
+  color: #e94560;
+}
+
+/* ── Loading spinner dots ─────────────────────────────────────── */
+.loading-dots {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.loading-dots span {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loading-dots span:nth-child(2) { animation-delay: 0.15s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes bounce {
+  from { transform: translateY(0); opacity: 0.6; }
+  to   { transform: translateY(-5px); opacity: 1; }
+}
+
+/* ── Responsive ───────────────────────────────────────────────── */
+@media (max-width: 400px) {
+  .service-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 7px;
+  }
+
+  .service-tile {
+    padding: 10px 4px;
+  }
+
+  .service-tile .tile-icon {
+    font-size: 1.3rem;
+  }
+
+  .home-card {
+    padding: 24px 18px;
+  }
+
+  .home-hero h1 {
+    font-size: 1.7rem;
+  }
+}

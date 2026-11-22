@@ -1,0 +1,55 @@
+.emergency-bar {
+  background: #1a0a0a;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #333;
+}
+
+.emergency-label {
+  color: #e94560;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.emergency-btn {
+  padding: 7px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.emergency-btn:hover {
+  opacity: 0.85;
+}
+
+.emergency-btn.hospital {
+  background: #e94560;
+  color: white;
+}
+
+.emergency-btn.police {
+  background: #0f3460;
+  color: white;
+}
+
+.emergency-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.emergency-loading {
+  color: #e94560;
+  font-size: 0.82rem;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

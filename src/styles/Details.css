@@ -1,0 +1,158 @@
+.details-container {
+  min-height: 100vh;
+  background: #f0f4f8;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.details-header {
+  background: #1a1a2e;
+  color: white;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.details-header a {
+  color: #e94560;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.details-header h2 {
+  font-size: 1.1rem;
+  flex: 1;
+}
+
+.details-body {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.details-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.details-card h3 {
+  font-size: 1.4rem;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.details-card .type-badge {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #0f3460;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.info-row .icon {
+  font-size: 1.2rem;
+  min-width: 28px;
+}
+
+.info-row .info-content {
+  flex: 1;
+}
+
+.info-row .info-label {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.info-row .info-value {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.info-row a {
+  color: #0f3460;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.info-row a:hover {
+  text-decoration: underline;
+}
+
+.details-map {
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.fav-toggle-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fav-toggle-btn.active {
+  background: #e94560;
+  color: white;
+}
+
+.fav-toggle-btn.inactive {
+  background: #e8f0fe;
+  color: #0f3460;
+  border: 2px solid #0f3460;
+}
+
+.fav-toggle-btn:hover {
+  opacity: 0.85;
+}
+
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.not-found a {
+  color: #0f3460;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .details-body {
+    margin: 16px auto;
+  }
+
+  .details-card h3 {
+    font-size: 1.2rem;
+  }
+}
